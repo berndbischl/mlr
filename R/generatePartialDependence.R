@@ -8,6 +8,9 @@
 #' estimating E_(x_c)(f(x_s, x_c)). The conditional expectation of f at observation i is estimated similarly.
 #' Additionally, partial derivatives of the marginalized function w.r.t. the features can be computed.
 #'
+#' This function requires the `mmpf` package to be installed. It is currently not on CRAN, but can
+#' be installed through GitHub using `devtools::install_github('zmjones/mmpf/pkg')`.
+#'
 #' @family partial_dependence
 #' @family generate_plot_data
 #' @aliases PartialDependenceData
@@ -65,7 +68,7 @@
 #'   The second element of `n` gives the size of the sample to be drawn without replacement from the `input` data.
 #'   Setting `n[2]` less than the number of rows in the `input` will decrease computation time.
 #'   The default for `n[1]` is 10, and the default for `n[2]` is the number of rows in the `input`.
-#' @param ... additional arguments to be passed to [mmpf::marginalPrediction].
+#' @param ... additional arguments to be passed to `mmpf`'s `marginalPrediction`.
 #' @return [PartialDependenceData]. A named list, which contains the partial dependence,
 #'   input data, target, features, task description, and other arguments controlling the type of
 #'   partial dependences made.

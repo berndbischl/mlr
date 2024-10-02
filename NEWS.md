@@ -1,39 +1,23 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+# mlr 2.19.2
 
-# mlr 2.19.1.9001
-
+- Make tests run with suggested packages absent.
 - Remove bartMachine learner (#2851)
-
-# mlr 2.19.1.9000
-
-- no changes
-
 
 # mlr 2.19.1
 
 ## Bug fixes
 
 - Adjust behavior of `"positive"` arg for `classif.logreg` (#2846)
-
 - Consistent naming for dummy feature encoding of variables with different levels count (#2847)
-
 - Remove {nodeHarvest} learners (#2841)
-
 - Remove {rknn} learner (#2842)
-
 - Remove all {DiscriMiner} learners (#2840)
-
 - Remove {extraTrees} learner (#2839)
-
 - Remove depcrecated {rrlda} learner
-
 - Resolve some {ggplot} deprecation warnings
-
 - Fixed `information.gain` filter calculation.
   Before, `chi.squared` was calculated even though `information.gain` was requested due to a glitch in the filter naming (#2816, @jokokojote)
-
 - Make `helpLearnerParam()`'s HTML parsing more robust (#2843)
-
 - Add HTML5 support for help pages
 
 # mlr 2.19.0
@@ -55,7 +39,7 @@
 - xgboost: update `objective` default from `reg:linear` (deprecated) to `reg:squarederror`
 - issue a warning if `blocking` was set in the Task but `blocking.cv` was not set within `makeResampleDesc() (#2788)
 - Fix order of learners in `generateLearningCurveData()` (#2768)
- - `getFeatureImportance()`: Account for feature importance weight of linear xgboost models
+- `getFeatureImportance()`: Account for feature importance weight of linear xgboost models
 - Fix learner note for learner glmnet (the default of param `s` did not match the learner note) (#2747)
 - Remove dependency {hrbrthemes} used in `createSpatialResamplingPlots()`. The package caused issues on R-devel. In addition users should set custom themes by themselves.
 - Explicitly return value in `getNestedTuneResultsOptPathDf()` (#2754)
